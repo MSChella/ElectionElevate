@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import axios from '../config/axios-config';
+import axios from '../../config/axios-config';
 
 const SignUpForm = () => {
     const [username, setUserName] = useState('');

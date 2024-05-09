@@ -6,7 +6,7 @@ import HomePage from './Pages/HomePage/homePage';
 import EInformation from './Pages/ElectoralInformation/electoralInformation';
 import VoteOut from './Pages/VoteOut/voteOut';
 import SignIn from './Pages/SignIn/signIn';
-import SignUpForm from './Pages/signUp';
+import SignUpForm from './components/RegistrationForm/signUp';
 
 const Navigation = () => {
 
