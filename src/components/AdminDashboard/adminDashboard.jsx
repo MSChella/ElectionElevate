@@ -25,7 +25,7 @@ const AdminDashboard = () => {
                     <li key={index}>
                         <p>Username: {admin.username}</p>
                         <p>Email: {admin.email}</p>
-                        {/* Add more fields as needed */}
+
                     </li>
                 ))}
             </ul>
