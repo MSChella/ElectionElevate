@@ -17,7 +17,7 @@ const Navigation = () => {
 
     <header>
 
-      <nav class="sidebar">
+      <nav className="sidebar">
         <ul>
           <li>
             <Link to="/">Home</Link>

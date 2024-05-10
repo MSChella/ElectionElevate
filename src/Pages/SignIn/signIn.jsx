@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
-import axios from 'axios';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../SignIn/style.css';
+import axios from '../../config/axios-config';
 
 
 
@@ -18,7 +18,7 @@ const SignIn = () => {
     const handleSignin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/auth/signin', { username, password });
+            const response = await axios.post('api/auth/signin', { username, password });
             console.log('Signin successful:', response.data);
 
             localStorage.setItem('token', response.data.token)
@@ -44,7 +44,7 @@ const SignIn = () => {
                             <h3 className="card-title text-center mb-4">Sign In</h3>
                             <form>
                                 <div className="mb-3">
-                                    <label htmlFor="email" className="form-label">Email</label>
+                                    <label htmlFor="email" className="form-label">Username</label>
                                     <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
                                 </div>
                                 <div className="mb-3">

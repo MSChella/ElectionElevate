@@ -1,5 +1,5 @@
 {
-  "name": "indian",
+  "name": "indian-elections",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,9 +21,37 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "*.json"
+        ],
+        "rules": {
+          "no-unused-vars": "off"
+        }
+      }
+    ],
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        " components": [
+          "/App",
+          "Pages/Home",
+          "component/Header/Header",
+          "index"
+                   
+        ],
+        "specialLink": [
+          "#!"
+        ]
+      }
     ]
   },
   "browserslist": {
