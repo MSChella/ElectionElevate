@@ -15,8 +15,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,11 +42,10 @@
       "error",
       {
         " components": [
-          "/App",
-          "Pages/Home",
+          "App",
+          "Pages/SignIn/signIn",
           "component/Header/Header",
           "index"
-                   
         ],
         "specialLink": [
           "#!"
@@ -65,5 +64,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "customize-cra": "^1.0.0"
   }
 }
