@@ -1,8 +1,8 @@
 import React from 'react';
-import UserProfileCard from '../../components/UserProfile/userProfileCard'; // Import the UserProfileCard component
+import UserProfileCard from '../../components/UserProfile/userProfileCard';
 
 const UserProfilePage = () => {
-    // Sample user data
+
     const user = {
         name: 'User Name',
         age: 23,

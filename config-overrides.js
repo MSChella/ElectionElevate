@@ -2,7 +2,7 @@ const { override } = require('customize-cra');
 
 module.exports = override(
     (config) => {
-        // Add the babel plugin to the Babel configuration
+
         const babelIndex = config.module.rules.findIndex(
             (rule) => rule && rule.use && Array.isArray(rule.use)
         );
