@@ -10,6 +10,7 @@ import SignUpForm from './components/RegistrationForm/signUp';
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
 import UserProfilePage from './Pages/UserProfile/userProfile';
+import { useEffect, useState } from 'react';
 
 const Navigation = () => {
 
@@ -20,16 +21,13 @@ const Navigation = () => {
       <nav className="sidebar">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Election Monitor</Link>
           </li>
           <li>
-            <Link to="/electoral-info">Electoral Information</Link>
+            <Link to="/electoral-info">Election News</Link>
           </li>
           <li>
-            <Link to="/vote-out">Vote Out</Link>
-          </li>
-          <li>
-            <Link to="/my-profile">My Profile</Link>
+            <Link to="/vote-out">Election Assist</Link>
           </li>
 
         </ul>
@@ -55,7 +53,24 @@ const AppRoutes = () => {
   );
 };
 
+
+
 const App = () => {
+  const [authenticated, setAuthenticated] = useState(false);
+
+  useEffect(() => {
+
+    const token = localStorage.getItem('token');
+
+    if (token) {
+      setAuthenticated(true);
+
+    } else {
+      setAuthenticated(false);
+    }
+  }, []);
+
+
   return (
     <Router>
       <Header />

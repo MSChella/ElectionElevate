@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import axios from '../../config/axios-config';
 import '../RegistrationForm/style.css'
@@ -22,6 +23,7 @@ const SignUpForm = () => {
     const [spouseName, setspouseName] = useState('');
     const [maritalStatus, setMaritalStatus] = useState('');
 
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -55,6 +57,7 @@ const SignUpForm = () => {
 
 
             localStorage.setItem('token', response.data.token)
+            navigate('/');
         } catch (error) {
             console.error('Error registering user:', error);
         }

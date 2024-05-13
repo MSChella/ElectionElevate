@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import style from './style.css';
 
 
 
-const Header = () => {
 
+const Header = () => {
+    const [authenticated, setAuthenticated] = useState(!!localStorage.getItem('token'));
+    const navigate = useNavigate();
+    const handleSignout = () => {
+
+        localStorage.removeItem('token');
+        setAuthenticated(false);
+        navigate('/');
+    };
 
 
     return (
@@ -41,13 +50,12 @@ const Header = () => {
                                 </li>
                                 <li className="nav-item dropdown">
                                     <Link className="nav-link" to="/electoral-info">
-                                        ElectoralInformation
+                                        Election Pulse
                                     </Link>
                                     <div className="dropdown-content">
                                         <Link className="nav-link" to="/vote-out">
-                                            Vote OUT!
+                                            Votecast Challenge!
                                         </Link>
-
                                     </div>
                                 </li>
 
@@ -67,6 +75,10 @@ const Header = () => {
                         <Link className="nav-link" to="/sign-up">
                             Sign Up
                         </Link>
+                    </div>
+                    <div>
+                        <button type="button" onClick={handleSignout} className="btn btn-danger w-100 mt-3">Sign Out</button>
+
                     </div>
 
                 </div>
