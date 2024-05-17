@@ -1,0 +1,110 @@
+.gamification-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .gamification-page section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .gamification-page h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  form label {
+    margin-bottom: 5px;
+  }
+  
+  form select, form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  form p {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .gamification-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .gamification-page section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .gamification-page h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .quiz, .challenge, .prediction-game {
+    margin-top: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  form label {
+    margin-bottom: 5px;
+  }
+  
+  form input[type="text"], form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  form p {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+  }
+  
+  .result {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+  }
+  

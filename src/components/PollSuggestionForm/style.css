@@ -1,0 +1,15 @@
+.suggestion-form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+  
+  .suggestion-form textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  

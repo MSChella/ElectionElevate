@@ -53,8 +53,11 @@ const Header = () => {
                                         Election Pulse
                                     </Link>
                                     <div className="dropdown-content">
-                                        <Link className="nav-link" to="/vote-out">
-                                            Votecast Challenge!
+                                        <Link className="nav-link" to="/poll-page">
+                                            Votecast!
+                                            <Link className="nav-link" to="/gamification">
+                                                GameOn!
+                                            </Link>
                                         </Link>
                                     </div>
                                 </li>
