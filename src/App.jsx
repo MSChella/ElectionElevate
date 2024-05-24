@@ -3,8 +3,6 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import HomePage from './Pages/HomePage/homePage';
-import EInformation from './Pages/ElectoralInformation/electoralInformation';
-
 import SignIn from './Pages/SignIn/signIn';
 import SignUpForm from './components/RegistrationForm/signUp';
 import Header from './components/Header/header';
@@ -13,6 +11,7 @@ import UserProfilePage from './Pages/UserProfile/userProfile';
 import { useEffect, useState } from 'react';
 import PollPage from './Pages/Votecast/voteCast.Page.jsx';
 import GamificationPage from './Pages/Gamification/gamiFicationPage.jsx';
+import ElectoralInformation from './Pages/ElectoralInformation/electoralInformation';
 
 const Navigation = () => {
 
@@ -45,7 +44,7 @@ const AppRoutes = () => {
 
     <Routes>
       <Route path="/" exact Component={HomePage} />
-      <Route path="/electoral-info" Component={EInformation} />
+      <Route path="/electoral-info" Component={ElectoralInformation} />
       <Route path="/poll-page" Component={PollPage} />
       <Route path="/sign-in" Component={SignIn} />
       <Route path="/sign-up" Component={SignUpForm} />
@@ -78,7 +77,7 @@ const App = () => {
     <Router>
       <Header />
       <Navigation />
-      <AppRoutes />
+      <AppRoutes authenticated={authenticated} />
       <Footer />
     </Router>
   );
