@@ -77,7 +77,7 @@ const SignUpForm = () => {
                 role,
                 selectedConstituency,
                 selectedDistrict,
-                talukId,
+                // talukId,
                 sex,
                 age,
                 contactInfo,

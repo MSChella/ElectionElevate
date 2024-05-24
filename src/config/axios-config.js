@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 const axiosInstance = axios.create({
-    baseURL: 'https://indian-elections-back-end-api-services.onrender.com/',
+    baseURL: 'https://indian-elections-back-end-api-services.onrender.com',
 });
 
 
